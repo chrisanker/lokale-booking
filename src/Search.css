@@ -47,3 +47,7 @@ img {
     grid-column-end: 4;
 }
 
+.grid-item-4:hover {
+    text-decoration: underline;
+}
+
