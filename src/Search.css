@@ -12,6 +12,7 @@ img {
     grid-template-rows: 10vh 20vh 10vh;
     justify-content: center;
     grid-column-gap: 5em;
+    justify-items: center;
 }
 
 .grid-item-1 {
@@ -33,6 +34,10 @@ img {
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+.grid-item-3:hover {
+    text-decoration: underline;
 }
 
 .grid-item-4 {
