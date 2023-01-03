@@ -1,13 +1,44 @@
-.grid-container {
-    display: grid;
-    grid-template-rows: 10vh 40vh;
-}
-
-.grid-container img {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 8vw;
-}
-p {
+h1 {
     text-align: center;
 }
+
+img {
+    width: 10vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30vw 10vw 10vw 30vw;
+    grid-template-rows: 10vh 20vh 10vh;
+    justify-content: center;
+    grid-column-gap: 5em;
+}
+
+.grid-item-1 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.grid-item-2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.grid-item-3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.grid-item-4 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
