@@ -1,0 +1,13 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: 10vh 40vh;
+}
+
+.grid-container img {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 8vw;
+}
+p {
+    text-align: center;
+}
