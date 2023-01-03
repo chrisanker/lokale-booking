@@ -8,15 +8,11 @@ export function Search() {
             </h1>
             <div className="grid-container">
                 <div className="grid-item-1">
-                    <img src="https://static.thenounproject.com/png/1211373-200.png" alt="Meeting room icon"/>
-                </div>
-                <div className="grid-item-2">
-                    <img src="https://thumbs.dreamstime.com/b/aaiae-137315496.jpg" alt="Meeting room equipment icon"/>
-                </div>
-                <div className="grid-item-3">
+                    <img src="https://static.thenounproject.com/png/1211373-200.png" alt="Meeting room icon"/><br/>
                     Mødelokale
                 </div>
-                <div className="grid-item-4">
+                <div className="grid-item-2">
+                    <img src="https://thumbs.dreamstime.com/b/aaiae-137315496.jpg" alt="Meeting room equipment icon"/><br/>
                     Udstyr til mødelokale
                 </div>
             </div>
