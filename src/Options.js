@@ -1,6 +1,8 @@
-import './Search.css'
+import { DatePicker } from './Datepicker'
+import './Options.css'
 
-export function Search() {
+export function Options() {
+
     return (
         <div>
             <h1>
@@ -15,6 +17,9 @@ export function Search() {
                     <img src="https://thumbs.dreamstime.com/b/aaiae-137315496.jpg" alt="Meeting room equipment icon"/><br/>
                     Udstyr til mødelokale
                 </div>
+            </div>
+            <div>
+                {this.state ? <DatePicker /> : null}
             </div>
         </div>
     )

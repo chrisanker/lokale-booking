@@ -1,9 +1,9 @@
 import './App.css';
-import {Search} from "./Search";
+import {SearchPage} from "./SearchPage";
 
 function App() {
   return (
-        <Search />
+        <SearchPage />
   );
 }
 
