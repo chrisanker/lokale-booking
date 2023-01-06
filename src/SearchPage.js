@@ -1,5 +1,5 @@
 import React from "react";
-import { DatePicker } from "./Datepicker";
+import { SelectDate } from "./Datepicker";
 import './SearchPage.css'
 
 export class SearchPage extends React.Component{
@@ -29,7 +29,7 @@ export class SearchPage extends React.Component{
                     </div>
                 </div>
                 <div>
-                    {this.state.isDatePickerVisible ? <DatePicker /> : null}
+                    {this.state.isDatePickerVisible ? <SelectDate /> : null}
                 </div>
             </div>
         )
