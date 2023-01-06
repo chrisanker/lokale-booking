@@ -33,7 +33,7 @@ export class SearchPage extends React.Component{
                         Udstyr til mødelokale
                     </div>
                 </div>
-                <div>
+                <div id="datepicker">
                     {this.state.isDatePickerVisible ? <SelectDate /> : null}
                 </div>
             </div>

@@ -6,6 +6,9 @@ export function SelectDate(props) {
     const [startDate, setStartDate] = useState(new Date());
 
     return (
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+        <>
+        <h2>Hvornår skal du bruge det?</h2>
+        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} popperPlacement="auto" />
+        </>
     );
 }

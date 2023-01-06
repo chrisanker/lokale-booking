@@ -41,3 +41,6 @@ img {
     cursor: pointer;
 }
 
+#datepicker {
+    text-align: center;
+}
