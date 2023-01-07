@@ -1,9 +1,15 @@
-h1 {
+h1, h2 {
     text-align: center;
 }
 
 img {
     width: 10em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
 }
 
 .grid-container {
@@ -41,6 +47,6 @@ img {
     cursor: pointer;
 }
 
-#datepicker {
+#datepicker-container {
     text-align: center;
 }
