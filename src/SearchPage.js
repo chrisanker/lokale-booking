@@ -36,7 +36,7 @@ export class SearchPage extends React.Component{
                     </div>
                     <div className="grid-item-2" onClick={ this.handleUpdate }>
                         <img src="https://thumbs.dreamstime.com/b/aaiae-137315496.jpg" alt="Meeting room equipment icon"/><br/>
-                        Udstyr til mødelokale
+                        Mødelokaleudstyr
                     </div>
                 </div>
                 <div>
