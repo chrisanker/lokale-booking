@@ -47,6 +47,12 @@ img {
     cursor: pointer;
 }
 
+.room-list-container {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
 #datepicker-container {
     text-align: center;
 }
