@@ -5,7 +5,7 @@ export function Room(props) {
     const [roomSelected, setRoomSelected] = useState(true);
 
     const handleClick = (name) => {
-        setRoomSelected(roomSelectedState => !roomSelectedState);
+        setRoomSelected(roomSelected => !roomSelected);
         console.log("You selected " + name + ", " + roomSelected);
     } 
     return(
