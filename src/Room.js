@@ -1,22 +1,10 @@
 import React from "react";
 
-export class Room extends React.Component {
-    constructor(props) {
-        super(props);
-        this.setState = {
-            name: ''
-        }
-    }
-
-    setName = (roomName) => {
-        this.setState({
-            name: {roomName}
-        });
-    }
-
-    render() {
-        return(
-            <h5>Room Name: {this.state.name}</h5>
-        )
-    }
+export function Room(props) {
+    const name = props.name;  
+    return(
+        <React.Fragment>
+            {name}
+        </React.Fragment>
+    )
 }
