@@ -8,12 +8,8 @@ export function SelectDate(props) {
     return (
         <div>
             <h2>Hvornår skal du bruge det?</h2>
-        
             <div id="datepicker-container">
                 <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} popperPlacement="auto" />
-            </div>
-            <div className="button-container">
-                <button type="submit">Søg</button>
             </div>
         </div>
     );

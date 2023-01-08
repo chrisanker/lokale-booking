@@ -3,10 +3,12 @@ import { SelectDate } from "./Datepicker";
 import './SearchPage.css'
 
 export class SearchPage extends React.Component{
-    
-    state = {
-        isDatePickerVisible: false,
-        isRoomOptionSelected: false,
+    constructor(props) {
+        super(props);
+        this.state = {
+            isDatePickerVisible: false,
+            isAvailableRoomsVisible: false
+        };
     }
 
     handleUpdate = () => {
@@ -18,9 +20,8 @@ export class SearchPage extends React.Component{
         }
     }
 
-    roomSelect = () => {
-        this.setState({isRoomOptionSelected: true})
-        console.log("room was selected");
+    dateSearchClicked = () => {
+        this.setState({isAvailableRoomsVisible: true})
     }
     
     render() {
@@ -42,6 +43,11 @@ export class SearchPage extends React.Component{
                 <div>
                     {this.state.isDatePickerVisible ? <SelectDate /> : null}
                 </div>
+                {this.state.isDatePickerVisible &&
+                <div className="button-container">
+                    <button type="submit" onClick={ this.handleClick }>Søg</button>
+                </div>
+                }
             </div>
         )
     }
