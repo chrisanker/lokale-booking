@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function Room(props) {
     const name = props.name;
+    const [roomSelected, setRoomSelected] = useState(true);
+
     const handleClick = (name) => {
-        console.log("You selected " + name)
+        setRoomSelected(roomSelectedState => !roomSelectedState);
+        console.log("You selected " + name + ", " + roomSelected);
     } 
     return(
         <React.Fragment>
