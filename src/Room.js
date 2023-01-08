@@ -4,15 +4,19 @@ export class Room extends React.Component {
     constructor(props) {
         super(props);
         this.setState = {
-            name: 'Room name',
+            name: ''
         }
     }
+
+    setName = (roomName) => {
+        this.setState({
+            name: {roomName}
+        });
+    }
+
     render() {
-        const name = this.props.name;
         return(
-            <React.Fragment>
-                <h5>Room Name: {this.name}</h5>
-            </React.Fragment>
+            <h5>Room Name: {this.state.name}</h5>
         )
     }
 }

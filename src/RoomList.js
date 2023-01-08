@@ -1,9 +1,9 @@
 import React from "react";
 import { Room } from "./Room";
 
-export function RoomList() {
-    const roomCount = 4;
-    return (
+export class RoomList extends React.Component {
+    render() {
+        return (
             <React.Fragment>
                 <h2>Ledige lokaler</h2>
                 <ul className="room-list-container">
@@ -14,4 +14,5 @@ export function RoomList() {
                 </ul>
             </React.Fragment>
         )
+    }
     }
