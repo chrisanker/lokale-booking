@@ -1,7 +1,7 @@
 import React from "react";
 import { SelectDate } from "./Datepicker";
 import { RoomList } from "./RoomList";
-import './SearchPage.css'
+import './css/SearchPage.css'
 
 export class SearchPage extends React.Component{
     constructor(props) {
