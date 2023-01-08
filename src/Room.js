@@ -5,6 +5,7 @@ export function Room(props) {
     return(
         <React.Fragment>
             {name}
+            <button>Vælg</button>
         </React.Fragment>
     )
 }
