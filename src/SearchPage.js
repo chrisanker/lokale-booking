@@ -1,5 +1,6 @@
 import React from "react";
 import { SelectDate } from "./Datepicker";
+import { RoomList } from "./RoomList";
 import './SearchPage.css'
 
 export class SearchPage extends React.Component{
@@ -20,7 +21,7 @@ export class SearchPage extends React.Component{
         }
     }
 
-    dateSearchClicked = () => {
+    handleClick = () => {
         this.setState({isAvailableRoomsVisible: true})
     }
     
@@ -48,6 +49,7 @@ export class SearchPage extends React.Component{
                     <button type="submit" onClick={ this.handleClick }>Søg</button>
                 </div>
                 }
+                {this.state.isAvailableRoomsVisible ? <RoomList /> : null}
             </div>
         )
     }
