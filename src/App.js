@@ -6,23 +6,23 @@ import {RoomList} from "./components/RoomList";
 import {Room} from "./components/Room";
 import {Booking} from "./components/Booking";
 function App() {
-    const [availableRooms, setAvailableRooms] = useState([
+    const [rooms, setRooms] = useState([
         'Mødelokale 1',
         'Mødelokale 2',
         'Mødelokale 3',
         'Mødelokale 4'
     ]);
     const [selection, setSelection] = useState("")
-    const final = [];
-    for (let i = 0; i < availableRooms.length; i++){
-        final.push(<li><Room name={availableRooms[i]} /></li>);
+    const availableRooms = [];
+    for (let i = 0; i < rooms.length; i++){
+        availableRooms.push(<li><Room name={rooms[i]} /></li>);
     }
     return (
         <React.Fragment>
             <div>
                 <Resource />
                 <SelectDate />
-                <RoomList availableRooms={final} />
+                <RoomList availableRooms={availableRooms} />
                 <Booking selection={selection}/>
             </div>
         </React.Fragment>
