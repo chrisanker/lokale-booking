@@ -12,7 +12,7 @@ function App() {
         'Mødelokale 3',
         'Mødelokale 4'
     ]);
-    const [selection, setSelection] = useState("")
+    const [selection, setSelection] = useState()
     const availableRooms = [];
     for (let i = 0; i < rooms.length; i++){
         availableRooms.push(<li><Room name={rooms[i]} getName={selection => setSelection(selection)}/></li>);
@@ -23,7 +23,7 @@ function App() {
                 <Resource />
                 <SelectDate />
                 <RoomList availableRooms={availableRooms} />
-                <Booking selection={selection}/>
+                {selection ? <Booking selection={selection}/> : null}
             </div>
         </React.Fragment>
     );
