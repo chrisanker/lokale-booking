@@ -11,7 +11,7 @@ export function Room(props) {
     return(
         <React.Fragment>
             {name}
-            <button onClick={() => props.getName(name)}>Vælg</button>
+            <button onClick={() => props.getRoomName(name)}>Vælg</button>
         </React.Fragment>
     )
 }
