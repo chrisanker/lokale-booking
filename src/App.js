@@ -15,7 +15,7 @@ function App() {
     const [selection, setSelection] = useState("")
     const availableRooms = [];
     for (let i = 0; i < rooms.length; i++){
-        availableRooms.push(<li><Room name={rooms[i]} /></li>);
+        availableRooms.push(<li><Room name={rooms[i]} getName={selection => setSelection(selection)}/></li>);
     }
     return (
         <React.Fragment>

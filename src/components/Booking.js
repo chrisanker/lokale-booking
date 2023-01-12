@@ -7,7 +7,7 @@ export function Booking(props) {
             <h1>Bookingdetaljer</h1>
             <form>
                 <label>Du har valgt</label>
-                <input type="text" readOnly={true} value={selection} /><br/>
+                <input type={"text"} readOnly={true} value={selection} /><br/>
             </form>
         </React.Fragment>
     )
