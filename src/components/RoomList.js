@@ -2,8 +2,7 @@ import React from "react";
 import { Room } from "./Room";
 import {Booking} from "./Booking";
 
-export class RoomList extends React.Component {
-    render() {
+export function RoomList() {
         const meetingRooms = [
             'Mødelokale 1',
             'Mødelokale 2',
@@ -20,7 +19,7 @@ export class RoomList extends React.Component {
                 <ul className="room-list-container">
                     {final}
                 </ul>
+                <Booking />
             </React.Fragment>
         )
-    }
 }

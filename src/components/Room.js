@@ -4,18 +4,16 @@ import {Booking} from "./Booking";
 
 export function Room(props) {
     const name = props.name;
-    const [roomSelected, setRoomSelected] = useState(false);
+    const [selection, setSelection] = useState();
 
     const handleClick = (name) => {
-        setRoomSelected(roomSelected => !roomSelected);
-        console.log("You selected " + name + ", " + roomSelected);
+        setSelection(name);
     }
     return(
         <React.Fragment>
             {name}
             <button onClick={() => handleClick(props.name)}>Vælg</button>
         </React.Fragment>
-
     )
 }
 

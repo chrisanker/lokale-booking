@@ -1,9 +1,13 @@
 import React from "react";
 
-export class Booking extends React.Component {
-    render() {
-        return(
+export function Booking() {
+    return(
+        <React.Fragment>
             <h1>Bookingdetaljer</h1>
-        )
-    }
+            <form>
+                <label>Du har valgt</label>
+                <input type="text" readOnly="true"/><br/>
+            </form>
+        </React.Fragment>
+    )
 }
