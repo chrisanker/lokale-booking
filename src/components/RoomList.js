@@ -1,13 +1,14 @@
 import React from "react";
 import { Room } from "./Room";
+import {Booking} from "./Booking";
 
 export class RoomList extends React.Component {
     render() {
         const meetingRooms = [
-            'Meeting Room 1',
-            'Meeting Room 2',
-            'Meeting Room 3',
-            'Meeting Room 4'
+            'Mødelokale 1',
+            'Mødelokale 2',
+            'Mødelokale 3',
+            'Mødelokale 4'
         ];
         const final = [];
         for (let i = 0; i < meetingRooms.length; i++){

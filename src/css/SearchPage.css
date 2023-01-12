@@ -1,5 +1,10 @@
-h1, h2 {
+h1, h2, h4{
     text-align: center;
+    padding: 1em;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 img {
@@ -12,45 +17,15 @@ img {
     margin-top: 1em;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 30vw 10vw 10vw 30vw;
-    grid-template-rows: 10vh 20vh 10vh;
-    justify-content: center;
-    grid-column-gap: 5em;
-    justify-items: center;
-}
-
 .grid-item-1 {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
     text-align: center;
-}
-
-.grid-item-1:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.grid-item-2 {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    text-align: center;
-}
-
-.grid-item-2:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    border-radius: 0.8em;
 }
 
 .room-list-container {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 #datepicker-container {

@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
-import { Booking } from './Booking';
 import './css/App.css';
-import {SearchPage} from "./SearchPage";
-
+import {Resource} from "./components/Resource";
+import {SelectDate} from "./components/Datepicker";
+import {RoomList} from "./components/RoomList";
+import {Booking} from "./components/Booking";
 function App() {
-  const [roomSelectedState, setRoomSelectedState] = useState(false);
-  return (
-    <React.Fragment>
-       {roomSelectedState ? <Booking /> : <SearchPage />}
-    </React.Fragment>
-  );
-}
+    const [isRoomSelected, setIsRoomSelected] = useState(false);
 
+    return (
+        <React.Fragment>
+            {isRoomSelected ? <Booking /> :
+                <div>
+                    <Resource />
+                    <SelectDate/>
+                </div>
+            }
+        </React.Fragment>
+    );
+}
 export default App;
