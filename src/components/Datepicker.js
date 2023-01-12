@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {RoomList} from "./RoomList";
 
-export function SelectDate(props) {
+export function SelectDate() {
     const [startDate, setStartDate] = useState();
     const [search, setSearch] = useState(false)
     const handleClick = () => {
@@ -23,7 +23,6 @@ export function SelectDate(props) {
             <div className="button-container">
                 <button onClick={handleClick}>Søg</button>
             </div>
-            {search ? <RoomList /> : null}
         </div>
     );
 }

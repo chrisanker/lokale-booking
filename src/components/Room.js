@@ -12,7 +12,7 @@ export function Room(props) {
     return(
         <React.Fragment>
             {name}
-            <button onClick={() => handleClick(props.name)}>Vælg</button>
+            <button onClick={() => handleClick()}>Vælg</button>
         </React.Fragment>
     )
 }
