@@ -6,18 +6,17 @@ import {RoomList} from "./components/RoomList";
 import {Room} from "./components/Room";
 import {BookingDetails} from "./components/BookingDetails";
 function App() {
-    const rooms = [
-        'Mødelokale 1',
-        'Mødelokale 2',
-        'Mødelokale 3',
-        'Mødelokale 4'
-    ];
+    const [rooms, setRooms] = useState([
+        {id: 1, name: 'Mødelokale 1', datesBooked: []},
+        {id: 2, name: 'Mødelokale 2', datesBooked: []},
+        {id: 3, name: 'Mødelokale 3', datesBooked: []},
+        {id: 4, name: 'Mødelokale 4', datesBooked: []}
+    ]);
     const [selection, setSelection] = useState()
     const [date, setDate] = useState()
-    const availableRooms = [];
-    for (let i = 0; i < rooms.length; i++){
-        availableRooms.push(<li><Room name={rooms[i]} getRoomName={selection => setSelection(selection)}/></li>);
-    }
+    const availableRooms = rooms.map((room, id) => (
+        <li key={id}><Room name={room.name} getRoomName={selection => setSelection(selection)}/></li>
+        ));
     return (
         <React.Fragment>
             <div>
