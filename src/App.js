@@ -4,7 +4,7 @@ import {Resource} from "./components/Resource";
 import {SelectDate} from "./components/Datepicker";
 import {RoomList} from "./components/RoomList";
 import {Room} from "./components/Room";
-import {Booking} from "./components/Booking";
+import {BookingDetails} from "./components/Booking";
 function App() {
     const rooms = [
         'Mødelokale 1',
@@ -24,7 +24,7 @@ function App() {
                 <Resource />
                 <SelectDate date={date} handleClick={date => setDate(date)}/>
                 {date ? <RoomList availableRooms={availableRooms} /> : null}
-                {selection ? <Booking selection={selection} date={date} /> : null}
+                {selection ? <BookingDetails selection={selection} date={date} /> : null}
             </div>
         </React.Fragment>
     );

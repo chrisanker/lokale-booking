@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Booking(props) {
+export function BookingDetails(props) {
     const selection = props.selection;
     const date = props.date;
     return (
@@ -10,8 +10,8 @@ export function Booking(props) {
             <div></div>
                 <div>
                     <h3>Bookingdetaljer</h3>
-                    <p>{selection}</p>
-                    <p>{date}</p>
+                    <p><span>Lokale:</span> {selection}</p>
+                    <p><span>Dato:</span> {date}</p>
                 </div>
                 <div>
                     <form>
