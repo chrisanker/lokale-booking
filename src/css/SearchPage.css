@@ -18,6 +18,7 @@ label span {
 
 ul {
     list-style: none;
+    margin-bottom: 10em;
 }
 
 ul button {
@@ -30,6 +31,10 @@ p span {
 
 form {
     margin-bottom: 10em;
+}
+
+.img-container {
+    text-align: center;
 }
 
 .room-list-container {

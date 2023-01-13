@@ -6,7 +6,7 @@ export function Resource() {
         <div>
             <h1>Book et mødelokale</h1>
                 <div>
-                    <div className="grid-item-1">
+                    <div className="img-container">
                         <img src="https://static.thenounproject.com/png/1211373-200.png" alt="Meeting room icon"/>
                     </div>
                 </div>
