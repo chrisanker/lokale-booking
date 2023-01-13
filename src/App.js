@@ -6,12 +6,12 @@ import {RoomList} from "./components/RoomList";
 import {Room} from "./components/Room";
 import {Booking} from "./components/Booking";
 function App() {
-    const [rooms, setRooms] = useState([
+    const rooms = [
         'Mødelokale 1',
         'Mødelokale 2',
         'Mødelokale 3',
         'Mødelokale 4'
-    ]);
+    ];
     const [selection, setSelection] = useState()
     const [date, setDate] = useState()
     const availableRooms = [];
