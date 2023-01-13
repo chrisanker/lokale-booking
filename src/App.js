@@ -4,7 +4,7 @@ import {Resource} from "./components/Resource";
 import {SelectDate} from "./components/Datepicker";
 import {RoomList} from "./components/RoomList";
 import {Room} from "./components/Room";
-import {BookingDetails} from "./components/Booking";
+import {BookingDetails} from "./components/BookingDetails";
 function App() {
     const rooms = [
         'Mødelokale 1',
