@@ -23,7 +23,7 @@ function App() {
             <div>
                 <Resource />
                 <SelectDate date={date} handleClick={date => setDate(date)}/>
-                <RoomList availableRooms={availableRooms} />
+                {date ? <RoomList availableRooms={availableRooms} /> : null}
                 {selection ? <Booking selection={selection} date={date} /> : null}
             </div>
         </React.Fragment>
