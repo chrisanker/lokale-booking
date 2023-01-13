@@ -1,6 +1,4 @@
 import React from "react";
-import { Room } from "./Room";
-import {Booking} from "./Booking";
 
 export function RoomList({ availableRooms }) {
     return (

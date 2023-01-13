@@ -1,6 +1,4 @@
-import React, {useState} from "react";
-import { SelectDate } from "./Datepicker";
-import { RoomList } from "./RoomList";
+import React from "react";
 import '../css/SearchPage.css'
 
 export function Resource() {
