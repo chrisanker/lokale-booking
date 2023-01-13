@@ -5,6 +5,7 @@ export function BookingDetails(props) {
     const date = props.date;
     
     const handleSubmit = (e) => {
+        e.preventDefault();
         const email = e.target.email.value;
         alert("Tak for din booking. En bekræftelse vil blive sendt til " + email);
     }
