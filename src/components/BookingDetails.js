@@ -4,7 +4,7 @@ export function BookingDetails(props) {
     const selection = props.selection;
     const date = props.date;
     
-    const handleSubmit = (e) => {
+   /*  const handleSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const name = e.target.name.value;
@@ -13,7 +13,7 @@ export function BookingDetails(props) {
         + ". En bekræftelse vil blive sendt til "
         + email
         );
-    }
+    } */
 
     return (
         <React.Fragment>
@@ -26,7 +26,7 @@ export function BookingDetails(props) {
                     <p><span>Dato:</span> {date}</p>
                 </div>
                 <div>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={(e) => props.handleSubmit(e)}>
                         <h3>Dine Oplysninger</h3>
                         <label>Navn <span>*</span></label><br />
                         <input id={"name"} type={"text"} required /><br />
