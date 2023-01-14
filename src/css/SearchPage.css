@@ -23,6 +23,8 @@ ul {
 
 ul button {
     margin-left: 0.5em;
+    font-size: 1em;
+    width: 7vw;
 }
 
 li {
@@ -44,7 +46,6 @@ form {
 .room-list-container {
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
 }
 
 .finalise-booking-container {
