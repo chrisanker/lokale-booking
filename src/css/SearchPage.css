@@ -35,8 +35,11 @@ p span {
     font-weight: bold;
 }
 
-form {
+.finalise-booking-form {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10em;
+    margin-left: 1vw;
 }
 
 .img-container {
@@ -50,7 +53,20 @@ form {
 
 .finalise-booking-container {
     display: grid;
-    grid-template-columns: 10vw 30vw 40vw;
+    grid-template-columns: 10vw 30vw 35vw;
+    font-size: 1.2em;
+}
+
+.finalise-booking-form button{
+    width: 20vw;
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+
+.finalise-booking-container input{
+    width: 35vw;
+    padding: 0.2em;
+    font-size: 1.1em;
 }
 
 .datepicker-container {

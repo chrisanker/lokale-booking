@@ -20,13 +20,13 @@ export function BookingDetails(props) {
             <h1>Færdiggør Booking</h1>
             <div className="finalise-booking-container">
                 <div></div>
-                <div className="finalise-booking-selections">
+                <div>
                     <h3>Dine valg</h3>
                     <p><span>Lokale:</span> {selection}</p>
                     <p><span>Dato:</span> {date}</p>
                 </div>
                 <div>
-                    <form onSubmit={(e) => props.handleSubmit(e)}>
+                    <form className="finalise-booking-form" onSubmit={(e) => props.handleSubmit(e)}>
                         <h3>Dine Oplysninger</h3>
                         <label>Navn <span>*</span></label><br />
                         <input id={"name"} type={"text"} required /><br />
