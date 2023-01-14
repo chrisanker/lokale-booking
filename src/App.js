@@ -5,6 +5,7 @@ import { SelectDate } from "./components/Datepicker";
 import { RoomList } from "./components/RoomList";
 import { Room } from "./components/Room";
 import { BookingDetails } from "./components/BookingDetails";
+import { Confirmation } from './components/Confirmation';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
 
     const [selection, setSelection] = useState();
     const [date, setDate] = useState();
+    const [submissionMade, setSubmissionMade] = useState(false);
     const availableRooms = rooms.map((room, name) => (
         <li key={name}>
         <Room name={room.name} getRoomName={selection => setSelection(selection)} />
@@ -25,6 +27,7 @@ function App() {
     const updateDatesBooked = (e) => {
         e.preventDefault();
         console.log(selection, date);
+        setSubmissionMade(true);
     };
 
     return (
@@ -33,7 +36,10 @@ function App() {
                 {!selection ? <Resource /> : null}
                 {!selection ? <SelectDate date={date} handleClick={date => setDate(date)} /> : null}
                 {date && !selection ? <RoomList availableRooms={availableRooms} /> : null}
-                {selection ? <BookingDetails selection={selection} date={date} handleSubmit={updateDatesBooked} /> : null}
+                {selection && !submissionMade ? <
+                    BookingDetails selection={selection} date={date} handleSubmit={updateDatesBooked}
+                /> : null}
+                {submissionMade ? <Confirmation /> : null}
             </div>
         </React.Fragment>
     );
