@@ -8,6 +8,8 @@ export function Confirmation (props) {
             <h1>Tak for din booking.</h1>
             <p>En bekræftelse er blevet sendt til {email}.</p>
             <p>Hvad ønsker du at foretage dig?</p>
+            <button>Book Nyt Mødelokale</button>
+            <button>Luk Fane</button>
         </React.Fragment>
     )
 }
