@@ -33,6 +33,12 @@ function App() {
         setSubmissionMade(true);
     };
 
+    function startNewSearch() {
+        setSubmissionMade(!submissionMade);
+        setSelection(!selection);
+        setDate();
+    }
+
     return (
         <React.Fragment>
             <div>
@@ -42,7 +48,7 @@ function App() {
                 {selection && !submissionMade ? <
                     BookingDetails selection={selection} date={date} handleSubmit={updateDatesBooked}
                 /> : null}
-                {submissionMade ? <Confirmation email={email} /> : null}
+                {submissionMade ? <Confirmation email={email} handleClick={startNewSearch} /> : null}
             </div>
         </React.Fragment>
     );
