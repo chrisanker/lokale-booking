@@ -5,7 +5,7 @@ export function Room(props) {
     
     return(
         <React.Fragment>
-            {name}
+            <label>{name}</label>
             <button onClick={() => props.getRoomName(name)}>Vælg</button>
         </React.Fragment>
     )

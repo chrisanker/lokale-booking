@@ -18,10 +18,10 @@ export function BookingDetails(props) {
     return (
         <React.Fragment>
             <h1>Færdiggør Booking</h1>
-            <div className="booking-container ">
-            <div></div>
-                <div>
-                    <h3>Bookingdetaljer</h3>
+            <div className="finalise-booking-container">
+                <div></div>
+                <div className="finalise-booking-selections">
+                    <h3>Dine valg</h3>
                     <p><span>Lokale:</span> {selection}</p>
                     <p><span>Dato:</span> {date}</p>
                 </div>

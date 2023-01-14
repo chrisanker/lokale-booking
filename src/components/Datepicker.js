@@ -10,8 +10,12 @@ export function SelectDate(props) {
         <div>
             <h2>Hvornår skal du bruge det?</h2>
             <div id="datepicker-container">
-                <input type={"date"} value={date} onInput={(e) => setDate(e.target.value)}></input>
-                <button onClick={() => props.handleClick(date)}>Søg</button>
+                <div>
+                    <input type={"date"} value={date} onInput={(e) => setDate(e.target.value)}></input>
+                </div>
+                <div>
+                    <button onClick={() => props.handleClick(date)}>Søg</button>
+                </div>
             </div>
         </div>
     );

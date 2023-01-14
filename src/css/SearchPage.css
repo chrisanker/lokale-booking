@@ -1,10 +1,14 @@
 h1, h2, h4 {
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
 }
 
 h1 {
     text-transform: uppercase;
+}
+
+button {
+    border-radius: 0.5em;
 }
 
 img {
@@ -43,11 +47,77 @@ form {
 
 }
 
-.booking-container {
+.finalise-booking-container {
     display: grid;
-    grid-template-columns: 5em 20em 40em;
+    grid-template-columns: 10vw 30vw 40vw;
 }
 
 #datepicker-container {
+    display: flex;
     text-align: center;
+    align-items: stretch;
+    
+}
+
+#datepicker-container input, button{
+    margin-right: 3vw;
+    font-size: xx-large;
+    flex-basis: 40vw;
+}
+
+
+@media screen and (max-width: 480px) {
+    h2, h3, p, label {
+        font-size: 1.5em;
+    }
+
+    label span {
+        font-size: xx-large;
+    }
+
+    .room-list-container{
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .room-list-container button{
+        margin-bottom: 2vh;æ
+    }
+    .booking-container {
+        grid-template-columns: 5vw 40vw 45vw;
+    }
+
+    .finalise-booking-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;   
+    }
+
+    .finalise-booking-container button{
+        font-size: xx-large;
+        padding: 4vw;
+    }
+
+    .finalise-booking-container label{
+        font-size: x-large;
+        text-align: left;
+    }
+
+    .finalise-booking-container input{
+        margin-top: 0.6em;
+        font-size: 2.5vh;
+        width: 80vw;
+    }
+
+    #datepicker-container {
+        display: flex;
+        flex-direction: column;
+        margin: 1vh 4vw 4vh 4vw; 
+    }
+
+    #datepicker-container button {
+        margin-top: 1em;
+        padding: 0.5em ;
+        width: 30vw;
+    }
 }
