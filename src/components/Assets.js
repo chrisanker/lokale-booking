@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/SearchPage.css'
 
-export function Resource() {
+export function Assets() {
     return (
         <div>
             <h1>Book et mødelokale</h1>

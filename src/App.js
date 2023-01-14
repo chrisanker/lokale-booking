@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './css/App.css';
-import { Resource } from "./components/Resource";
+import { Assets } from "./components/Assets";
 import { SelectDate } from "./components/Datepicker";
 import { RoomList } from "./components/RoomList";
 import { Room } from "./components/Room";
@@ -42,7 +42,7 @@ function App() {
     return (
         <React.Fragment>
             <div>
-                {!selection ? <Resource /> : null}
+                {!selection ? <Assets /> : null}
                 {!selection ? <SelectDate date={date} handleClick={date => setDate(date)} /> : null}
                 {date && !selection ? <RoomList availableRooms={availableRooms} /> : null}
                 {selection && !submissionMade ? <
