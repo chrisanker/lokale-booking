@@ -7,10 +7,6 @@ h1 {
     text-transform: uppercase;
 }
 
-button {
-    border-radius: 0.5em;
-}
-
 img {
     width: 10em;
 }
@@ -29,6 +25,10 @@ ul button {
     margin-left: 0.5em;
 }
 
+li {
+    font-size: 1.2em;
+}
+
 p span {
     font-weight: bold;
 }
@@ -44,7 +44,7 @@ form {
 .room-list-container {
     display: flex;
     justify-content: space-around;
-
+    flex-direction: column;
 }
 
 .finalise-booking-container {
@@ -56,13 +56,12 @@ form {
     display: flex;
     text-align: center;
     align-items: stretch;
-    
+    justify-content: center;
 }
 
-#datepicker-container input, button{
+#datepicker-container :is(input, button) {
     margin-right: 3vw;
-    font-size: xx-large;
-    flex-basis: 40vw;
+    font-size: x-large;
 }
 
 
@@ -78,7 +77,6 @@ form {
     .room-list-container{
         flex-direction: column;
         text-align: center;
-        
     }
     .room-list-container button{
         margin-bottom: 2vh;
