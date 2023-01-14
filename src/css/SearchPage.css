@@ -52,18 +52,21 @@ form {
     grid-template-columns: 10vw 30vw 40vw;
 }
 
-#datepicker-container {
+.datepicker-container {
     display: flex;
     text-align: center;
     align-items: stretch;
     justify-content: center;
 }
 
-#datepicker-container :is(input, button) {
-    margin-right: 3vw;
+.datepicker-container :is(input, button) {
     font-size: x-large;
 }
 
+.datepicker-container button {
+    margin-left: 5vw;
+    width: 8vw;
+}
 
 @media screen and (max-width: 480px) {
     h2, h3, p, label {
@@ -104,13 +107,13 @@ form {
         width: 80vw;
     }
 
-    #datepicker-container {
+    .datepicker-container {
         display: flex;
         flex-direction: column;
         margin: 1vh 4vw 4vh 4vw; 
     }
 
-    #datepicker-container button {
+    .datepicker-container button {
         margin-top: 1em;
         padding: 0.5em ;
         width: 30vw;
