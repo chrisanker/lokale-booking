@@ -96,12 +96,19 @@ p span {
     grid-column-end: 3;
 }
 
+.confirmation-buttons {
+    display: flex;
+    justify-content: left;
+    margin-top: 4vh;
+}
+
 .confirmation-container button {
     width: 5vw;
-    margin-left: 20vw;
-    margin-right: 20vw;
     font-size: large;
+    margin-right: 5vw;
 }
+
+
 
 @media screen and (max-width: 480px) {
     h2, h3, p, label {

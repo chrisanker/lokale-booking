@@ -6,10 +6,13 @@ export function Confirmation(props) {
     return (
         <React.Fragment>
             <h1>Tak for din booking.</h1>
-            <div className="confirmation-container">                
+            <div className="confirmation-container">
                 <p>En bekræftelse er blevet sendt til {email}.</p>
                 <p>Ønsker du at booke et andet mødelokale?</p>
-                <button onClick={() => props.handleClick()}>Ja</button>
+                <div className="confirmation-buttons">
+                    <button onClick={() => props.handleClick()}>Ja</button>
+                    <button>Nej</button>
+                </div>
             </div>
         </React.Fragment>
     )
