@@ -19,13 +19,16 @@ function App() {
     const [selection, setSelection] = useState();
     const [date, setDate] = useState();
     const [submissionMade, setSubmissionMade] = useState(false);
+    const [email, setEmail] = useState();
+
     const availableRooms = rooms.map((room, name) => (
         <li key={name}>
         <Room name={room.name} getRoomName={selection => setSelection(selection)} />
         </li>)
     );
-    const updateDatesBooked = (e) => {
+    const updateDatesBooked = (e) => {        
         e.preventDefault();
+        setEmail(e.target.email.value);
         console.log(selection, date);
         setSubmissionMade(true);
     };
@@ -39,7 +42,7 @@ function App() {
                 {selection && !submissionMade ? <
                     BookingDetails selection={selection} date={date} handleSubmit={updateDatesBooked}
                 /> : null}
-                {submissionMade ? <Confirmation /> : null}
+                {submissionMade ? <Confirmation email={email} /> : null}
             </div>
         </React.Fragment>
     );

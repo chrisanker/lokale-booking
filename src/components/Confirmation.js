@@ -6,7 +6,7 @@ export function Confirmation (props) {
     return(
         <React.Fragment>
             <h1>Tak for din booking.</h1>
-            <p>En bekræftelse er blevet sendt til {email}</p>
+            <p>En bekræftelse er blevet sendt til {email}.</p>
             <p>Hvad ønsker du at foretage dig?</p>
         </React.Fragment>
     )
