@@ -20,6 +20,11 @@ function App() {
     const [date, setDate] = useState();
     const [submissionMade, setSubmissionMade] = useState(false);
     const [email, setEmail] = useState();
+    const [equipmentSearch, setEquipmentSearch] = useState(false);
+    
+    const checkHandler = () => {
+        setEquipmentSearch(!equipmentSearch);
+    }
 
     const availableRooms = rooms.map((room, name) => (
         <li key={name}>

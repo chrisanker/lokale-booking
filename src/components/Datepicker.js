@@ -8,9 +8,13 @@ export function SelectDate(props) {
     return (
         <div>
             <h2>Hvornår skal du bruge det?</h2>
-            <div className="datepicker-container" id="datepicker-container">
+            <div className="datepicker-container">
                 <div>
-                    <input type={"date"} value={date} onInput={(e) => setDate(e.target.value)}></input>
+                    <input type={"date"} value={date} onInput={(e) => setDate(e.target.value)}></input><br /><br />
+                    <div id="datepicker-equipment-select">
+                        <input type={"checkbox"} checked={equipmentSearch} onChange={(e) => props.checkHandler(e)} />
+                        <label>Jeg ønsker også at booke udstyr</label>
+                    </div>
                 </div>
                 <div>
                     <button onClick={() => props.handleClick(date)}>Søg</button>
