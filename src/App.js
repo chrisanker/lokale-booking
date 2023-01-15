@@ -10,18 +10,28 @@ import { EquipmentList } from './components/EquipmentList';
 
 function App() {
 
-    const [rooms, setRooms] = useState([
+    //Below hook will eventally store the state of each room and which dates they are booked.
+   /*  const [rooms, setRooms] = useState([
         { id: 1, name: 'Mødelokale 1', datesBooked: [] },
         { id: 2, name: 'Mødelokale 2', datesBooked: [] },
         { id: 3, name: 'Mødelokale 3', datesBooked: [] },
         { id: 4, name: 'Mødelokale 4', datesBooked: [] }
-    ]);
+    ]); */
+
+    //Below array is used until the above hook is properly implemented.
+    const rooms = [
+        { id: 1, name: 'Mødelokale 1', datesBooked: [] },
+        { id: 2, name: 'Mødelokale 2', datesBooked: [] },
+        { id: 3, name: 'Mødelokale 3', datesBooked: [] },
+        { id: 4, name: 'Mødelokale 4', datesBooked: [] }
+    ];
 
     const [selection, setSelection] = useState();
     const [date, setDate] = useState();
     const [submissionMade, setSubmissionMade] = useState(false);
     const [email, setEmail] = useState();
     const [equipmentSearch, setEquipmentSearch] = useState(false);
+    const [equipmentSelected, setEquipmentSelected] = useState(false);
 
     const checkHandler = () => {
         setEquipmentSearch(!equipmentSearch);
@@ -36,7 +46,7 @@ function App() {
         e.preventDefault();
         setEmail(e.target.email.value);
         console.log(selection, date);
-        setSubmissionMade(true);
+        setSubmissionMade(!submissionMade);
     };
 
     function startNewSearch() {
@@ -55,10 +65,11 @@ function App() {
                 /> : null
                 }
                 {date && !selection ? <RoomList availableRooms={availableRooms} /> : null}
-                {equipmentSearch && date ? <EquipmentList /> : null}
-                {selection && !submissionMade ? <
-                    BookingDetails selection={selection} date={date} handleSubmit={updateDatesBooked}
-                /> : null}
+                {equipmentSearch && date && !selection ? <EquipmentList /> : null}
+                {selection && !submissionMade ?
+                    <BookingDetails selection={selection} date={date} handleSubmit={updateDatesBooked}
+                    /> : null
+                }
                 {submissionMade ? <Confirmation email={email} handleClick={startNewSearch} /> : null}
             </div>
         </React.Fragment>
