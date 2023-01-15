@@ -6,6 +6,7 @@ import { RoomList } from "./components/RoomList";
 import { Room } from "./components/Room";
 import { BookingDetails } from "./components/BookingDetails";
 import { Confirmation } from './components/Confirmation';
+import { EquipmentList } from './components/EquipmentList';
 
 function App() {
 
@@ -21,17 +22,17 @@ function App() {
     const [submissionMade, setSubmissionMade] = useState(false);
     const [email, setEmail] = useState();
     const [equipmentSearch, setEquipmentSearch] = useState(false);
-    
+
     const checkHandler = () => {
         setEquipmentSearch(!equipmentSearch);
     }
 
     const availableRooms = rooms.map((room, name) => (
         <li key={name}>
-        <Room name={room.name} getRoomName={selection => setSelection(selection)} />
+            <Room name={room.name} getRoomName={selection => setSelection(selection)} />
         </li>)
     );
-    const updateDatesBooked = (e) => {        
+    const updateDatesBooked = (e) => {
         e.preventDefault();
         setEmail(e.target.email.value);
         console.log(selection, date);
@@ -48,8 +49,13 @@ function App() {
         <React.Fragment>
             <div>
                 {!selection ? <Assets /> : null}
-                {!selection ? <SelectDate date={date} handleClick={date => setDate(date)} /> : null}
+                {!selection ? <SelectDate
+                    date={date} handleClick={date => setDate(date)}
+                    checkHandler={checkHandler}
+                /> : null
+                }
                 {date && !selection ? <RoomList availableRooms={availableRooms} /> : null}
+                {equipmentSearch && date ? <EquipmentList /> : null}
                 {selection && !submissionMade ? <
                     BookingDetails selection={selection} date={date} handleSubmit={updateDatesBooked}
                 /> : null}

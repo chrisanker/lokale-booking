@@ -12,7 +12,7 @@ export function SelectDate(props) {
                 <div>
                     <input type={"date"} value={date} onInput={(e) => setDate(e.target.value)}></input><br /><br />
                     <div id="datepicker-equipment-select">
-                        <input type={"checkbox"} checked={equipmentSearch} onChange={(e) => props.checkHandler(e)} />
+                        <input type={"checkbox"} onChange={(e) => props.checkHandler(e)} />
                         <label>Jeg ønsker også at booke udstyr</label>
                     </div>
                 </div>
