@@ -25,7 +25,7 @@ ul {
 ul button {
     margin-left: 0.5em;
     font-size: 1em;
-    width: 7vw;
+    width: 4em;
 }
 
 li {
@@ -64,7 +64,7 @@ p span {
 }
 
 .finalise-booking-form button{
-    width: 20vw;
+    width: 6em;
     padding: 0.5em;
     font-size: 1.5em;
 }
@@ -88,7 +88,7 @@ p span {
 
 .datepicker-container button {
     margin-left: 5vw;
-    width: 8vw;
+    width: 4em;
 }
 
 .confirmation-container {
@@ -149,7 +149,6 @@ p span {
     }
 
     .finalise-booking-container input{
-        margin-top: 0.6em;
         font-size: 2.5vh;
         width: 80vw;
     }
