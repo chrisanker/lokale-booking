@@ -15,7 +15,7 @@ export function Confirmation(props) {
                 <p>Ønsker du at booke et andet mødelokale?</p>
                 <div className="confirmation-buttons">
                     <button onClick={() => props.handleClick()}>Ja</button>
-                    <button onClick={()=> handleClick()}>Nej</button>
+                    <button onClick={() => handleClick()}>Nej</button>
                 </div>
             </div>
         </React.Fragment>
