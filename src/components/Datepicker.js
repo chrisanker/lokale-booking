@@ -5,7 +5,7 @@ import moment from "moment";
 export function SelectDate(props) {
 
     const [date, setDate] = useState(props?.value ?? '');
-    let today = moment().format("YYYY-MM-DD");
+    const today = moment().format("YYYY-MM-DD");
 
     return (
         <div>
