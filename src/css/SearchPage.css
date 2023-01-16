@@ -19,7 +19,7 @@ label span {
 
 ul {
     list-style: none;
-    margin-bottom: 10em;
+    margin-bottom: 5em;
 }
 
 ul button {
@@ -113,7 +113,12 @@ p span {
     margin-right: 5vw;
 }
 
-
+.equipment-list-container {
+    display: grid;
+    grid-template-columns: 11em 2em;
+    justify-content: center;
+    text-align: left;
+}
 
 @media screen and (max-width: 480px) {
     h2, h3, p, label {
@@ -135,7 +140,7 @@ p span {
     .finalise-booking-container {
         display: flex;
         flex-direction: column;
-        text-align: center;   
+        text-align: center;
     }
 
     .finalise-booking-container button{
@@ -156,7 +161,7 @@ p span {
     .datepicker-container {
         display: flex;
         flex-direction: column;
-        margin: 1vh 4vw 4vh 4vw; 
+        margin: 1vh 4vw 4vh 4vw;
     }
 
     .datepicker-container button {
