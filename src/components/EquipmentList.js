@@ -11,7 +11,7 @@ export function EquipmentList() {
 
     return (
         <React.Fragment>
-            <h2>Ledigt Udstyr</h2>
+            <h2>Ledigt Udstyr (Under construction)</h2>
             <div >
                 <ul >{listAssets}</ul>
             </div>
