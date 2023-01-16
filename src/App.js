@@ -51,8 +51,8 @@ function App() {
 
     function startNewSearch() {
         setSubmissionMade(!submissionMade);
-        setSelection(!selection);
-        setDate();
+        setSelection(undefined);
+        setDate(undefined);
     }
 
     return (
