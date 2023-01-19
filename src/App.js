@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './css/App.css';
-import { Assets } from "./components/Assets";
+import { Header } from "./components/Header";
 import { SelectDate } from "./components/Datepicker";
 import { RoomList } from "./components/RoomList";
 import { Room } from "./components/Room";
@@ -39,7 +39,7 @@ function App() {
 
     const availableRooms = rooms.map((room, name) => (
         <li key={name}>
-            <Room name={room.name} getRoomName={selection => setSelection(selection)} />
+            <Room name={room.name} getRoomName={selection => setSelection(selection)} equipmentSearch={equipmentSearch} />
         </li>)
     );
     const updateDatesBooked = (e) => {
@@ -58,7 +58,7 @@ function App() {
     return (
         <React.Fragment>
             <div>
-                {!selection ? <Assets /> : null}
+                {!selection ? <Header /> : null}
                 {!selection ? <SelectDate
                     date={date} handleClick={date => setDate(date)}
                     checkHandler={checkHandler}

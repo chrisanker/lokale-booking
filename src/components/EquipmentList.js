@@ -5,7 +5,7 @@ export function EquipmentList() {
     const listAssets = assets.map((asset) =>
         <div key={asset.toString()} className={"equipment-list-container"}>
             <label>{asset}</label>
-            <input type={"checkbox"}/>
+            <input type={"checkbox"} />
         </div>
     );
 
@@ -15,6 +15,10 @@ export function EquipmentList() {
             <div >
                 <ul >{listAssets}</ul>
             </div>
+            <div id={"equipment-list-btn"}>
+                <button>Forsæt</button>
+            </div>
+
         </React.Fragment>
     )
 }

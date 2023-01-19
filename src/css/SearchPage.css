@@ -19,7 +19,7 @@ label span {
 
 ul {
     list-style: none;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 ul button {
@@ -118,6 +118,18 @@ p span {
     grid-template-columns: 11em 2em;
     justify-content: center;
     text-align: left;
+}
+
+#equipment-list-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#equipment-list-btn button {
+    width: 30vw;
+    height: 8vh;
+    font-size: large;
 }
 
 @media screen and (max-width: 480px) {
