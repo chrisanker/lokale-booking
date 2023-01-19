@@ -16,7 +16,7 @@ export function EquipmentList() {
                 <ul >{listAssets}</ul>
             </div>
             <div id={"equipment-list-btn"}>
-                <button>Forsæt</button>
+                <button>Fortsæt</button>
             </div>
 
         </React.Fragment>
